@@ -3,15 +3,11 @@ import random
 from grille import Grille
 from bateau import PorteAvion, Croiseur, Torpilleur, SousMarin
 
-# Création de la grille
 grille = Grille(8, 10)
-
-# Création des bateaux
 types = [PorteAvion, Croiseur, Torpilleur, SousMarin]
 bateaux = []
 
 
-# Placement aléatoire sans chevauchement
 for TypeBateau in types:
 
     possibilites = []
@@ -115,7 +111,6 @@ while True:
             grille.tirer(ligne, colonne)
             print("💦 Plouf !")
 
-        # Fin de partie
         tous_coules = True
 
         for bateau in bateaux:
